@@ -58,6 +58,9 @@ public class ListArticles extends BaseActionBarActivity {
 				helper.truncateTables(database);
 				setupList(false);
 				return true;
+            case R.id.menuSettings:
+                startActivity(new Intent(getBaseContext(), Settings.class));
+                return true;
 			default:
 				return super.onOptionsItemSelected(item);
 		}
